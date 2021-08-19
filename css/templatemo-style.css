@@ -303,22 +303,22 @@ a.tm-text-primary:hover {
 
 .nav-link-1.active,
 .nav-link-1:hover {
-    border-color: #33ccff;
+    border-color: #000000;
 }
 
 .nav-link-2.active,
 .nav-link-2:hover {
-    border-color: #ff6666;
+    border-color: #000000;
 }
 
 .nav-link-3.active,
 .nav-link-3:hover {
-    border-color: #33cc66;
+    border-color: #000000;
 }
 
 .nav-link-4.active,
 .nav-link-4:hover {
-    border-color: #cc66cc;
+    border-color: #000000;
 }
 
 .tm-search-input {
