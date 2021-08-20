@@ -69,10 +69,25 @@ https://templatemo.com/tm-556-catalog-z
 
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row mb-4">
-            <h2 class="col-6 tm-text-primary">
+            <h2 class="col-2 tm-text-primary">
                 Latest Photos
             </h2>
+            <button type="button" class="col-lg-2 align-content-lg-start btn btn-dark" id="liveToastBtn">Hello</button>
         </div>
+
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Banksy</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
+
         <div class="row tm-mb-90 tm-gallery">
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
@@ -198,6 +213,16 @@ https://templatemo.com/tm-556-catalog-z
             $(window).on("load", function() {
                 $('body').addClass('loaded');
             });
+
+            var toastTrigger = document.getElementById('liveToastBtn')
+            var toastLiveExample = document.getElementById('liveToast')
+            if (toastTrigger) {
+                toastTrigger.addEventListener('click', function() {
+                    var toast = new bootstrap.Toast(toastLiveExample)
+
+                    toast.show()
+                })
+            }
         </script>
 </body>
 
